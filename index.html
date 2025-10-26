@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toure Aboubacar — Développeur Web freelance. Sites modernes, rapides et élégants. Portfolio & services.">
+  <title>ToureDev | Développeur Web Freelance</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Skip link pour accessibilité -->
+  <a class="sr-only" href="#main">Aller au contenu principal</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <div id="user-profile-frame"></div>
+  <header class="navbar" id="siteHeader" role="banner">
+    <div class="container navbar-container">
+      <a href="#hero" class="logo" aria-label="Aller en haut de la page">
+        <span class="brand-mark" aria-hidden="true">TD</span>
+        <span>ToureDev</span>
+        <span class="tagline muted">Développeur Web</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Menu principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active" data-target="hero">Accueil</a></li>
+          <li><a href="#skills" class="nav-link" data-target="skills">Compétences</a></li>
+          <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+          <li><a href="#portfolio" class="nav-link" data-target="portfolio">Portfolio</a></li>
+          <li><a href="#about" class="nav-link" data-target="about">À propos</a></li>
+          <li><a href="contact.html" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="homeBtn" title="Page d'accueil" aria-label="Aller à la page d'accueil">
+            <i class="bx bx-home"></i>
+          </button>
+          
+          <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+            <i class="bx bx-menu"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+
+<!-- ===================== MAIN ===================== -->
+<main id="main" tabindex="-1">
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero" aria-labelledby="heroHeading">
+    <div class="container hero-container">
+
+
+      <!-- TEXTE À GAUCHE -->
+      <div class="hero-left">
+        <h1 id="heroHeading" class="hero-title reveal">
+          Salut, je suis <span>Toure Abou</span>
+        </h1>
+
+        <!-- SOUS-TITRE -->
+        <p class="hero-subtitle reveal" style="animation-delay:1.5s;">
+          Je conçois des sites modernes, rapides et accessibles, pensés pour offrir une
+          expérience utilisateur optimale et valoriser votre présence en ligne. Chaque
+          projet est unique, alliant design élégant et performance technique.
+        </p>
+
+
+
+        <!-- CTA -->
+        <div class="cta-row reveal" style="animation-delay:2s;">
+          <a class="btn btn-primary" href="#portfolio">
+            <i class="bx bx-briefcase"></i> Voir mes projets
+          </a>
+          <a class="btn btn-ghost" href="contact.html">
+            <i class="bx bx-mail-send"></i> Me contacter
+          </a>
+        </div>
+      </div><br>
+
+      <!-- IMAGE À DROITE -->
+      <div class="hero-right reveal" aria-hidden="false">
+        <div class="photo-rect" role="img" aria-label="Portrait de Toure Aboubacar">
+          <picture>
+            <source srcset="pro.png 1600w, pro.png 800w" 
+                    sizes="(min-width: 1400px) 540px, (min-width: 900px) 420px, 320px">
+            <img id="heroImage" src="pro.png" alt="Portrait de Toure Aboubacar" loading="lazy">
+          </picture>
+        </div>
+                        
+      </div>
+     
+    </div>
+  </section>
+
+
+</main>
+
+
+    <!-- ===== SKILLS ===== -->
+    
+    <section id="skills" class="reveal" aria-labelledby="skillsTitle">
+      <h2 id="skillsTitle" class="section-title">Compétences</h2>
+      <p class="section-sub">Mes outils et technologies préférés pour concevoir des sites performants et élégants.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bxl-html5"></i></div>
+          <h3>HTML5 / CSS3</h3>
+          <p>Structure sémantique et styles modernes pour un rendu professionnel.</p>
+        </div>
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bxl-javascript"></i></div>
+          <h3>JavaScript</h3>
+          <p>Interactions dynamiques et animations fluides sur vos pages.</p>
+        </div>
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bxl-react"></i></div>
+          <h3>React</h3>
+          <p>Applications rapides, modulaires et réactives avec composants modernes.</p>
+        </div>
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bxl-php"></i></div>
+          <h3>PHP / MySQL</h3>
+          <p>Développement backend efficace pour sites dynamiques et sécurisés.</p>
+        </div>
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bxl-wordpress"></i></div>
+          <h3>WordPress</h3>
+          <p>Sites administrables et personnalisés, optimisés pour les pros.</p>
+        </div>
+        <div class="skill-card">
+          <div class="icon-wrap glow"><i class="bx bx-analyse"></i></div>
+          <h3>SEO & Performance</h3>
+          <p>Optimisation du référencement naturel et des vitesses de chargement.</p>
+        </div>
+        
+      </div>
+    <!-- TYPEWRITER -->
+        <div class="hero-typewriter reveal" id="typeWrap" style="animation-delay:1.8s;">
+          <span class="cursor">|</span>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+<!-- ===== SERVICES ===== -->
+<section id="services" class="reveal" aria-labelledby="servicesTitle">
+  <h2 id="servicesTitle" class="section-title">Mes Services</h2>
+  <p class="section-sub">
+    Je transforme vos idées en expériences web modernes, performantes et captivantes.  
+    Que vous soyez <strong>entrepreneur</strong>, <strong>créateur</strong> ou <strong>particulier</strong>, je vous aide à donner vie à votre projet digital.
+  </p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-laptop"></i></div>
+      <h3>Création de site simple</h3>
+      <p>Un site de présentation clair et rapide — idéal pour démarrer votre présence en ligne à petit budget.</p>
+      <a href="contact.html?service=simple" class="learn-more">→ Créer mon site</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-code-alt"></i></div>
+      <h3>Création de site professionnel</h3>
+      <p>Un site complet, moderne et sur mesure — pensé pour développer votre activité et attirer vos clients.</p>
+      <a href="contact.html?service=professionnel" class="learn-more">→ Lancer mon site pro</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-refresh"></i></div>
+      <h3>Refonte de site existant</h3>
+      <p>Modernisez votre ancien site pour le rendre plus rapide, plus esthétique et mieux référencé.</p>
+      <a href="contact.html?service=refonte" class="learn-more">→ Moderniser mon site</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-world"></i></div>
+      <h3>Application web</h3>
+      <p>Des solutions sur mesure pour automatiser vos processus et offrir des services en ligne performants.</p>
+      <a href="contact.html?service=application" class="learn-more">→ Créer mon application</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-shield-quarter"></i></div>
+      <h3>Maintenance & Sécurité</h3>
+      <p>Un site toujours à jour, protégé et sauvegardé — pour une tranquillité d’esprit totale.</p>
+      <a href="contact.html?service=maintenance" class="learn-more">→ Protéger mon site</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-search-alt-2"></i></div>
+      <h3>Visibilité & SEO</h3>
+      <p>Optimisez votre site pour être visible sur Google et attirer plus de visiteurs naturellement.</p>
+      <a href="contact.html?service=seo" class="learn-more">→ Booster ma visibilité</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap"><i class="bx bx-support"></i></div>
+      <h3>Conseils & Accompagnement</h3>
+      <p>Je vous guide pas à pas dans la stratégie, la création et la réussite de votre projet digital.</p>
+      <a href="contact.html?service=conseil" class="learn-more">→ Discutons ensemble</a>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="reveal" aria-labelledby="portfolioTitle">
+      <h2 id="portfolioTitle" class="section-title">Portfolio</h2>
+      <p class="section-sub">Quelques réalisations et prototypes — clairs, performants et pensés pour l’utilisateur.</p>
+
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="https://i.ibb.co/MV0CC5s/modern-site.jpg" alt="Site vitrine moderne">
+            <div class="overlay"><i class="bx bx-link-external"></i></div>
+          </div>
+          <h3>Site vitrine moderne</h3>
+          <p><strong>Stack :</strong> HTML, CSS, JS — <strong>Objectif :</strong> visibilité & simplicité.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="https://i.ibb.co/v4fjN3h/portfolio.jpg" alt="Mon portfolio">
+            <div class="overlay"><i class="bx bx-code-alt"></i></div>
+          </div>
+          <h3>Mon portfolio</h3>
+          <p><strong>Stack :</strong> HTML / CSS / JS — <strong>Focus :</strong> performance & identité.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="https://i.ibb.co/zZ5nB8h/dashboard.jpg" alt="Dashboard prototype">
+            <div class="overlay"><i class="bx bx-pie-chart-alt-2"></i></div>
+          </div>
+          <h3>Dashboard prototype</h3>
+          <p><strong>Stack :</strong> React, Chart.js — <strong>Objectif :</strong> visualisation claire.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="https://i.ibb.co/JHh6h5b/blog.jpg" alt="Blog minimaliste">
+            <div class="overlay"><i class="bx bx-book-open"></i></div>
+          </div>
+          <h3>Blog minimaliste</h3>
+          <p><strong>Stack :</strong> PHP, MySQL — <strong>Objectif :</strong> lecture fluide.</p>
+        </div>
+      </div>
+
+      <p class="cta-center"><a href="contact.html" class="btn btn-primary">Travaillons ensemble</a></p>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="reveal" aria-labelledby="aboutTitle">
+      <h2 id="aboutTitle" class="section-title">À propos</h2>
+      <p class="section-sub">Développeur web passionné, j’aide les entrepreneurs, associations et petites entreprises à bâtir des sites modernes, performants et accessibles.</p>
+
+      <div class="about-container">
+        <div class="about-photo">
+          <div class="photo-frame">
+            <img src="moinv.png" alt="Photo de Toure Aboubacar" loading="lazy">
+            <div class="photo-glow"></div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p>Je suis <strong>Toure Abou</strong>, développeur web freelance motivé par la création de solutions digitales <span class="highlight">esthétiques</span> et <span class="highlight">fiables</span>. Mon approche : <span class="highlight-strong">simplicité, performance et transparence</span>.</p>
+
+          <p>J’accorde une grande importance à la qualité du code, à l’accessibilité et à l’expérience utilisateur. Chaque projet est une opportunité d’apprendre et d’apporter une vraie valeur au client.</p>
+
+          <p>Mes technologies principales : <strong>React, PHP, WordPress</strong>.</p>
+
+          <div class="about-metrics">
+            <div class="metric"><i class="bx bx-rocket"></i><div><strong>Début 2025</strong><small>lancement freelance</small></div></div>
+            <div class="metric"><i class="bx bx-layer"></i><div><strong>5 projets</strong><small>personnels & en cours</small></div></div>
+            <div class="metric"><i class="bx bx-code-alt"></i><div><strong>Stack</strong><small>React • PHP • WordPress</small></div></div>
+          </div>
+
+          <div class="about-services">
+            <h4>Je peux vous accompagner pour :</h4>
+            <ul>
+              <li><i class="bx bx-globe"></i> Créer un site vitrine moderne et responsive</li>
+              <li><i class="bx bx-trending-up"></i> Optimiser la performance et le référencement</li>
+              <li><i class="bx bx-shield-quarter"></i> Assurer la maintenance et la sécurité</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER / SOCIAL ===================== -->
+  <footer>
+    <section id="social" class="reveal">
+      <h2 class="section-title">Réseaux Sociaux</h2>
+      <p class="section-sub">Retrouvons-nous sur mes plateformes préférées pour échanger, collaborer et partager mes projets.</p>
+
+      <div class="social-grid">
+        <a href="https://github.com/abouportfolio-spec" target="_blank" class="social-card github"><i class="bx bxl-github" rel="noopener noreferrer"></i><span>GitHub / </span></a>
+        <a href="https://www.linkedin.com/jobs/" target="_blank" class="social-card linkedin" rel="noopener noreferrer">
+          <i class="bx bxl-linkedin"></i>
+          <span>LinkedIn / </span>
+        </a>
+        <a href="https://x.com/ToureDevWeb" target="_blank" class="social-card instagram" rel="noopener noreferrer">
+          <i class="bx bxl-instagram"></i>
+          <span>Instagram / </span>
+        </a>
+        <a href="https://wa.me/2250500656877" target="_blank" class="social-card whatsapp">
+          <i class="bx bxl-whatsapp" rel="noopener noreferrer"></i>
+          <span>WhatsApp / </span>
+        </a>
+        <a href="mailto:abouportfolio@gmail.com" target="_blank" class="social-card email" rel="noopener noreferrer">
+          <i class="bx bx-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2025</span> — <strong>ToureDev</strong>. Tous droits réservés. • Conçu avec ♥</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPT ===================== -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>

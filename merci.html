@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci | ToureDev</title>
+
+  <!-- Boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <style>
+    :root {
+      --primary: #00bcd4;
+      --dark-bg: #0b0c10;
+      --text-light: #ffffff;
+      --text-muted: rgba(255,255,255,0.7);
+      --font: 'Poppins', sans-serif;
+    }
+
+    * {margin:0; padding:0; box-sizing:border-box;}
+
+    body {
+      font-family: var(--font);
+      background: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .thankyou-box {
+      background: rgba(255,255,255,0.05);
+      padding: 2.5rem 3rem;
+      border-radius: 15px;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0,188,212,0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .thankyou-box i {
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      background: var(--primary);
+      color: #000;
+      font-weight: 600;
+      padding: 0.9rem 1.5rem;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #01c9e3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    footer span {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thankyou-box">
+    <i class='bx bx-check-circle'></i>
+    <h1>Merci pour votre message !</h1>
+    <p>Je vous répondrai dans les plus brefs délais.  
+    Vous pouvez retourner à l’accueil en cliquant ci-dessous.</p>
+    <a href="index.html"><i class='bx bx-home'></i> Retour à l’accueil</a>
+  </div>
+
+  <footer>
+    © 2025 <span>ToureDev</span> — Tous droits réservés.
+  </footer>
+
+</body>
+</html>
