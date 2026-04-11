@@ -131,10 +131,11 @@ const typeWriterLoop = () => {
   if(!el) return;
 
   const phrases = [
-    'Développeur Web freelance ',
-    'Créateur de sites rapides ',
-    'Design & performance ',
-    'Interface claire & accessible '
+    'Software Architect ',
+    'Full-Stack Developer ',
+    'AI Solutions Expert ',
+    'Bâtir des systèmes intelligents ',
+    'Transformer la donnée en action '
   ];
 
   let pi = 0;      // phrase index
@@ -244,3 +245,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
   contactFormHandler();
   homeButtonHandler();
 });
+document.getElementById('year').textContent = new Date().getFullYear();
