@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.3;
+            background-color: #ffffff;
+        }
+        .container {
+            display: flex;
+            width: 210mm;
+            height: 297mm;
+            overflow: hidden; /* Empêche le débordement sur la page 2 */
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 32%;
+            background-color: #1a202c;
+            color: #ffffff;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h1 {
+            font-size: 18pt;
+            margin-bottom: 2pt;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+        .sidebar h2 {
+            font-size: 10.5pt;
+            font-weight: 300;
+            margin-bottom: 20pt;
+            color: #63b3ed;
+        }
+        .sidebar-section {
+            margin-bottom: 15pt;
+        }
+        .sidebar-title {
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #4a5568;
+            padding-bottom: 3pt;
+            margin-bottom: 8pt;
+            color: #ebf8ff;
+        }
+        .contact-item {
+            font-size: 8.5pt;
+            margin-bottom: 6pt;
+            word-wrap: break-word;
+        }
+        .skill-badge {
+            display: inline-block;
+            background: #2d3748;
+            padding: 3pt 6pt;
+            margin: 1.5pt;
+            border-radius: 3pt;
+            font-size: 7.5pt;
+        }
+        .certif-item {
+            font-size: 8.5pt;
+            margin-bottom: 8pt;
+        }
+        /* Main Content */
+        .main {
+            width: 68%;
+            padding: 25px 25px 40px 25px;
+            background-color: #fff;
+        }
+        .main-section {
+            margin-bottom: 14pt;
+        }
+        .main-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c5282;
+            border-left: 3px solid #2c5282;
+            padding-left: 8pt;
+            margin-bottom: 8pt;
+            text-transform: uppercase;
+        }
+        .experience-item {
+            margin-bottom: 10pt;
+        }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        .exp-sub {
+            font-size: 8.5pt;
+            color: #4a5568;
+            margin-bottom: 3pt;
+            font-weight: 500;
+        }
+        .exp-desc {
+            font-size: 9pt;
+            margin-left: 5pt;
+            text-align: justify;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>TOURE Abou</h1>
+            <h2>Software Architect & IA</h2>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contact</div>
+                <div class="contact-item">📍 Abidjan | Remote</div>
+                <div class="contact-item">📞 <a href="https://wa.me/2250500656877">+225 05 00 65 68 77</a></div>
+                <div class="contact-item">📧 <a href="mailto:abouportfolio@gmail.com">abouportfolio@gmail.com</a></div>
+                <div class="contact-item">🌐 <a href="https://abouportfolio-spec.github.io/mon-portfolio/">abouportfolio-spec.github.io</a></div>
+                <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/abouportfolio-spec">github.com/abouportfolio-spec</a></div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Expertise Technique</div>
+                <div>
+                    <span class="skill-badge">React.js / Vite</span>
+                    <span class="skill-badge">Node.js / Python</span>
+                    <span class="skill-badge">IA Integration</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">APIs REST</span>
+                    <span class="skill-badge">Clean Code</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">AWS (En cours)</span>
+                    <span class="skill-badge" style="background-color: #2c5282; border: 1px solid #63b3ed;">Leadership</span>
+                    <span class="skill-badge" style="background-color: #2c5282; border: 1px solid #63b3ed;">Résolution de problèmes</span>
+                    <span class="skill-badge" style="background-color: #2c5282; border: 1px solid #63b3ed;">Agilité / Scrum</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Certifications</div>
+
+                <div class="certif-item">
+                    <strong style="color: #63b3ed;">AWS Certified Solutions Architect</strong><br>
+                    <span style="font-size: 0.8em; opacity: 0.9;">Associate Level — <strong>[Prévu : Fin 2026]</strong></span>
+                </div>
+
+                <div class="certif-item" style="margin-top: 10px;">
+                    <strong>Deep Learning & Neural Networks</strong><br>
+                    <span style="font-size: 0.8em; opacity: 0.9;">Spécialisation — <strong>[80% complété]</strong></span>
+                </div>
+
+                <div class="certif-item" style="margin-top: 10px; border-top: 1px solid #2d3748; padding-top: 8px;">
+                    <strong style="font-size: 0.9em;">Expertise SoloLearn Academy :</strong><br>
+                    <span style="font-size: 0.75em; opacity: 0.7; display: block; margin-top: 2px;">
+                        • Python & SQL (Intermédiaire)<br>
+                        • IA & Machine Learning Basics<br>
+                        • Full-Stack JS / CSS / HTML
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar-section" style="margin-top: auto;">
+                <div class="sidebar-title">Langues</div>
+                <div class="contact-item">Français : Maternel</div>
+                <div class="contact-item">Anglais : Technique</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main-section">
+                <div class="main-title">Profil Professionnel</div>
+                <p style="font-size: 9.5pt; text-align: justify; margin: 0;">
+                    Architecte logiciel focalisé sur la performance et la scalabilité. Expert dans la conception d'écosystèmes robustes alliant la puissance du Backend Python à la fluidité de React. Orienté vers l'innovation par l'intégration d'IA.
+                </p>
+            </div>
+
+            <div class="main-section">
+                <div class="main-title">Expériences & Projets</div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span>Développeur Full-Stack Freelance</span>
+                        <span>2025 - Présent</span>
+                    </div>
+                    <div class="exp-sub">Projets digitaux sur mesure</div>
+                    <div class="exp-desc">
+                        • <strong>DevToure :</strong> Portfolio intelligent sous React/Vite.<br>
+                        • <strong>EXP-MALL :</strong> Optimisation de tunnel de vente e-commerce.<br>
+                        • <strong>Secure Gateway :</strong> Module d'authentification avancée.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span>Ingénierie de Données & IA</span>
+                        <span>2026</span>
+                    </div>
+                    <div class="exp-sub">Automatisation & Python</div>
+                    <div class="exp-desc">
+                        • <strong>Analyseur Financier :</strong> Script de gestion de trésorerie.<br>
+                        • <strong>Automation :</strong> Gestion de contenu dynamique.
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <div class="main-title">Formation</div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span>Architecture Logicielle & IA</span>
+                        <span>2024 - Présent</span>
+                    </div>
+                    <div class="exp-sub">Spécialisation Autodidacte Intensive</div>
+                    <div class="exp-desc" style="font-size: 8.5pt; opacity: 0.9;">
+                        Maîtrise des principes de Clean Architecture, déploiement Cloud et conteneurisation.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span>Sciences Éco & Gestion</span>
+                        <span>2022 - 2024</span>
+                    </div>
+                    <div class="exp-sub">UAO Bouaké | Analyse & Gestion</div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span>Baccalauréat Série D</span>
+                        <span>2021</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section" style="margin-bottom: 0; padding-bottom: 20px;">
+                <div class="main-title">Vision Entrepreneuriale</div>
+                <div class="exp-desc" style="font-size: 8.5pt;">
+                    • <strong>Afriqpay :</strong>Alternative souveraine aux passerelles de paiement internationales (PayPal/Stripe) pour lever les barrières d'accès au marché mondial en Afrique.<br>
+                    • <strong>Site-Freelance :</strong>Plateforme d'incubation facilitant l'accès aux premières missions pour les jeunes talents sans barrières administratives complexes.<br>
+                    • <strong>DiaWa Station :</strong> Système d'optimisation logistique pour le transport et la distribution de carburant.<br>
+                    • <strong>E-commerce :</strong> Architecture de gestion de stocks pour la revente de cosmétiques en gros (Wholesale).
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
