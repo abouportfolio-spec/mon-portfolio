@@ -5,133 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | ToureDev</title>
 
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
   <style>
-    :root{
-      --bg:#f7f8fb;
-      --surface:#ffffff;
-      --muted:#6b7280;
-      --text:#0b1320;
-      --accent:#0b6fa4;
-      --glass:rgba(11,17,28,0.04);
-      --soft-shadow:0 6px 20px rgba(11,17,28,0.06);
-      --radius:14px;
-      --transition:320ms cubic-bezier(.2,.9,.2,1);
-      --max-width:1100px;
-    }
-    body.dark{
-      --bg:#0e1116;
-      --surface:#0f1720;
-      --muted:#9aa4b2;
-      --text:#e6eef6;
-      --accent:#1e90d7;
-      --glass:rgba(255,255,255,0.05);
-      --soft-shadow:0 8px 30px rgba(2,6,23,0.6);
+    /* VARIABLES CSS */
+    :root {
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --muted: #6b7280;
+      --text: #0b1320;
+      --accent: #0b6fa4;
+      --glass: rgba(11, 17, 28, 0.04);
+      --soft-shadow: 0 6px 20px rgba(11, 17, 28, 0.06);
+      --radius: 14px;
+      --transition: 320ms cubic-bezier(.2, .9, .2, 1);
+      --max-width: 1100px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:"Poppins",system-ui;
-      background:var(--bg);
-      color:var(--text);
-      transition:background 420ms var(--transition),color 420ms var(--transition);
-      line-height:1.5;
+    /* RESET & BASE */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", system-ui;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
     }
-    a{text-decoration:none;color:inherit}
-    .container{max-width:var(--max-width);margin:0 auto;padding:0 1.25rem;width:100%}
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; width: 100%; }
 
     /* ======== NAVBAR ======== */
-    .navbar{
-      position:fixed;top:0;left:0;right:0;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:0.75rem 1.25rem;
-      backdrop-filter:blur(6px);
-      background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.35));
-      border-bottom:1px solid rgba(11,17,28,0.04);
-      box-shadow:var(--soft-shadow);
-      z-index:999;
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.8rem 1.25rem;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid var(--glass);
+      box-shadow: var(--soft-shadow);
+      z-index: 999;
     }
-    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;color:var(--accent);font-family:"Montserrat"}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(180deg,var(--accent),#0b4f78)}
-    nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
-    nav a{font-weight:500;font-size:.95rem;color:var(--text);opacity:.9;padding:.35rem .5rem;border-radius:8px;transition:color .3s}
-    nav a:hover, nav a.active{color:var(--accent)}
-    .nav-actions{display:flex;align-items:center;gap:.5rem}
-    .icon-btn{background:var(--surface);border:1px solid var(--glass);padding:.4rem;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;box-shadow:var(--soft-shadow);cursor:pointer;transition:transform .2s}
-    .icon-btn:hover{transform:translateY(-3px)}
+    .brand { display: flex; align-items: center; gap: .75rem; font-weight: 700; color: var(--accent); font-family: "Montserrat"; }
+    .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+    
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { font-weight: 500; font-size: .95rem; color: var(--text); opacity: .8; transition: 0.3s; }
+    nav a:hover, nav a.active { color: var(--accent); opacity: 1; }
 
     /* ======== SECTION PORTFOLIO ======== */
-    main{padding-top:100px;padding-bottom:4rem}
-    .section-title{text-align:center;font-size:2rem;color:var(--accent);font-weight:700;margin-bottom:.5rem;font-family:"Montserrat"}
-    .section-subtitle{text-align:center;color:var(--muted);margin-bottom:3rem;font-size:1rem}
+    main { padding-top: 130px; padding-bottom: 5rem; }
+    .header-text { text-align: center; margin-bottom: 4rem; }
+    .section-title { font-size: 2.5rem; color: var(--accent); font-weight: 700; font-family: "Montserrat"; margin-bottom: 0.5rem; }
+    .section-subtitle { color: var(--muted); font-size: 1.1rem; }
 
-    .portfolio-grid{
-      display:grid;
-      gap:1.8rem;
-      max-width:var(--max-width);
-      margin:0 auto;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    .portfolio-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
-    .portfolio-card{
-      background:var(--surface);
-      border-radius:var(--radius);
-      overflow:hidden;
-      border:1px solid var(--glass);
-      box-shadow:var(--soft-shadow);
-      position:relative;
-      transition:transform .3s,box-shadow .3s;
-      cursor:pointer;
+    .portfolio-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--glass);
+      box-shadow: var(--soft-shadow);
+      transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition);
     }
-    .portfolio-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 18px 40px rgba(11,17,28,0.08);
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(11, 17, 28, 0.1);
     }
-    .portfolio-card img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      display:block;
-      transition:transform .4s ease;
+    .portfolio-card img {
+      width: 100%; height: 230px; object-fit: cover; display: block;
+      transition: transform 0.5s ease;
     }
-    .portfolio-card:hover img{transform:scale(1.05);}
-    .portfolio-info{
-      padding:1.2rem;
+    .portfolio-card:hover img { transform: scale(1.08); }
+    
+    .portfolio-info { padding: 1.8rem; }
+    .portfolio-info h3 { font-size: 1.3rem; margin-bottom: 0.6rem; font-weight: 600; color: var(--text); }
+    .portfolio-info p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
+    .portfolio-info a { 
+      display: inline-block;
+      font-weight: 600; color: var(--accent); font-size: 1rem; 
+      border-bottom: 2px solid transparent; transition: 0.3s;
     }
-    .portfolio-info h3{
-      font-size:1.1rem;
-      margin-bottom:.4rem;
-      font-weight:600;
-      color:var(--text);
-    }
-    .portfolio-info p{
-      font-size:.95rem;
-      color:var(--muted);
-      line-height:1.45;
-      margin-bottom:.8rem;
-    }
-    .portfolio-info a{
-      font-weight:600;
-      color:var(--accent);
-      font-size:.92rem;
-    }
+    .portfolio-info a:hover { border-color: var(--accent); }
 
-    footer{
-      padding:2rem 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:.9rem;
+    /* ======== FOOTER ======== */
+    footer {
+      padding: 4rem 0; text-align: center; color: var(--muted); font-size: 0.95rem;
+      border-top: 1px solid var(--glass);
+      background: #fdfdfe;
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
+
   <header class="navbar">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <div class="brand"><span class="dot"></span><span>ToureDev</span></div>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+      <div class="brand">
+        <div class="dot"></div>
+        <span>ToureDev</span>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -140,64 +116,50 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="nav-actions"><button class="icon-btn" id="theme-toggle"><i class="bx bx-moon"></i></button></div>
     </div>
   </header>
 
-  <!-- SECTION PORTFOLIO -->
   <main class="container">
-    <h2 class="section-title">🖼️ Portfolio</h2>
-    <p class="section-subtitle">Découvrez quelques-uns de mes projets récents.</p>
+    <div class="header-text">
+      <h2 class="section-title">Mes Réalisations</h2>
+      <p class="section-subtitle">Solutions logicielles et architectures web sur-mesure.</p>
+    </div>
 
     <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="projet1.png" alt="Projet 1">
+      <article class="portfolio-card">
+        <img src="assets/img/smart-business-suite.png" alt="Smart Business Suite">
         <div class="portfolio-info">
-          <h3>Site E-commerce</h3>
-          <p>Développement complet d'une boutique en ligne moderne et responsive.</p>
-          <a href="#">Voir le projet →</a>
+          <h3>Smart Business Suite</h3>
+          <p>Une solution ERP robuste pour la gestion de stocks et le suivi financier en temps réel.</p>
+          <a href="https://github.com/abouportfolio-spec/smart-business-suite">Explorer le projet →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="portfolio-card">
-        <img src="projet2.png" alt="Projet 2">
+      <article class="portfolio-card">
+        <img src="assets/img/registre.png" alt="Système de Registre">
         <div class="portfolio-info">
-          <h3>Application Web</h3>
-          <p>Conception d'une application interactive avec React et backend Django.</p>
-          <a href="#">Voir le projet →</a>
+          <h3>Système de Registre</h3>
+          <p>Architecture sécurisée permettant la digitalisation des archives et des flux administratifs.</p>
+          <a href="https://github.com/abouportfolio-spec/smartfit-ecommerce">Voir le code source →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="portfolio-card">
-        <img src="projet3.png" alt="Projet 3">
+      <article class="portfolio-card">
+        <img src="assets/img/moi1.png" alt="Landing Page">
         <div class="portfolio-info">
-          <h3>Landing Page</h3>
-          <p>Création d'une page marketing optimisée pour les conversions.</p>
-          <a href="#">Voir le projet →</a>
+          <h3>Landing Page Premium</h3>
+          <p>Interface haute performance optimisée pour la conversion et la visibilité SEO.</p>
+          <a href="index.html">Démo en direct →</a>
         </div>
-      </div>
+      </article>
     </div>
   </main>
 
-  <footer>© <span id="year"></span> Toure Abou — Tous droits réservés.</footer>
-
-  <!-- SCRIPT -->
-  <script>
-    // Thème sombre
-    const body=document.body,themeToggle=document.getElementById('theme-toggle');
-    if(localStorage.getItem('theme')==='dark'){
-      body.classList.add('dark');
-      themeToggle.querySelector('i').classList.replace('bx-moon','bx-sun');
-    }
-    document.getElementById('year').textContent=new Date().getFullYear();
-    themeToggle.addEventListener('click',()=>{
-      body.classList.toggle('dark');
-      const isDark=body.classList.contains('dark');
-      const icon=themeToggle.querySelector('i');
-      icon.classList.toggle('bx-sun',isDark);
-      icon.classList.toggle('bx-moon',!isDark);
-      localStorage.setItem('theme',isDark?'dark':'light');
-    });
-  </script>
+  <footer>
+    <div class="container">
+      © 2026 Toure Abou — Développeur Full-Stack & Architecte Logiciel.
+    </div>
+  </footer>
+  <script src="assets/js/portfolio.js"></script>
 </body>
 </html>
